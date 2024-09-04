@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            margin-left: 400px;
+            margin-top: 300px;
+        }
+     .circle{
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        background-color:gray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+     }
+     .stand{
+        width: 15px;
+        height: 400px;
+        background-color:gray;
+        position: relative;
+        z-index: -1;
+        bottom: 10px;
+        left: 15px;
+     }
+    .blade1{
+        width: 500px;
+        height: 15px;
+        background-color: rgb(183, 174, 163);
+        border-radius: 80%;
+        position: absolute;
+        animation: move1 1s  linear infinite;
+    }
+    .blade2{
+        width: 500px;
+        height: 15px;
+        background-color: rgb(221, 219, 216);
+        border-radius: 80%;
+        position: absolute;
+        animation: move2 1s linear infinite;
+    }
+    @keyframes move1{
+        0%{
+            transform: rotate(90deg);
+        }
+        100%{
+            transform: rotate(270deg);
+        }
+    }
+    @keyframes move2{
+        0%{
+            transform: rotate(180deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
+    
+     
+        
+     
+    
+     
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="circle">
+            <div class="blade1"></div>
+            <div class="blade2"></div>
+        </div>
+        <div class="stand"></div>
+    </div>
+    
+
+
+</body>
+</html>
